@@ -1,0 +1,26 @@
+/**
+ * Teste container
+ * Please write a description
+ *
+ * @author asd <asd>
+ *
+ * @format
+ * @flow
+ */
+import React  from 'react'
+import styled from 'styled-components'
+
+//import config from 'src/config'
+
+const Teste = ({ t, i18n }) => {
+
+  return (
+    <Wrapper>
+      Teste
+    </Wrapper>
+  )
+}
+
+export default Teste
+
+const Wrapper = styled.div``
