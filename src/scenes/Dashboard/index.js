@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { actions } from 'src/store/rootSlices'
 
-import logo from 'src/assets/images/logo.png'
+import logo from 'assets/images/logo.png'
 
 const Dashboard = ({ t, i18n }) => {
 
   const { api_t } = useSelector(state => state.App)
   const { value, welcome } = useSelector(state => state.Dashboard)
 
-  const { onMount, onUnmount, setValue, updateValue } = actions.Dashboard
+  const { setValue, updateValue } = actions.Dashboard
   const { navigateTo } = actions.App
 
   const dispatch = useDispatch()
@@ -19,11 +19,12 @@ const Dashboard = ({ t, i18n }) => {
   const { API_TRANSLATION_TEST } = api_t
 
   useEffect(() => {
+    const { onMount, onUnmount } = actions.Dashboard
     dispatch(onMount())
     return () => {
       dispatch(onUnmount())
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <Wrapper>
@@ -56,7 +57,7 @@ const Wrapper = styled.div`
 `
 
 const Text = styled.h1`
-  color: #fff;  
+  color: #fff;
   padding:6px 12px 6px 12px;
   background-color: ${({ theme }) => theme.blue};
 `
