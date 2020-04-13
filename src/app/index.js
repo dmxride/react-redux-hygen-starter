@@ -12,29 +12,29 @@
 import React, { useEffect } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
-import Routes from '../routes'
 import { Switch, Route } from 'react-router'
 import { withTranslation } from 'react-i18next';
 
 import GlobalStyles from 'src/ui/globalStyles'
 import theme from 'src/ui/theme'
 
-import { actions } from 'src/store/rootSlices'
+import Routes from '../routes'
 
 import AppTools from './AppTools'
+
+import { actions } from 'src/store/rootSlices'
 
 function App(props) {
   const { t, i18n } = props
 
   const { user } = useSelector(state => state.App)
 
-  const { onMount } = actions.App
-
   const dispatch = useDispatch()
 
   useEffect(() => {
+    const { onMount } = actions.App
     dispatch(onMount())
-  }, []);
+  }, [dispatch])
 
   return (
     <ThemeProvider theme={theme}>

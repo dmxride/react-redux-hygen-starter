@@ -35,7 +35,7 @@ function* updateApiTranslationKeySaga({ payload }) {
 }
 
 function* updateUserRoleSaga({ payload }) {
-  alert('Update user role')
+  //alert('Update user role')
 }
 
 export default function* watcherSignin() {

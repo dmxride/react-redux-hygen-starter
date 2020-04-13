@@ -1,15 +1,15 @@
 ---
-to: "<%= !logic && 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.js' %>"
+to: "<%= !logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.js' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container
- * Please write a description
  *
  * @author <%= author%> <<%= email%>>
  *
  * @format
  * @flow
  */
+
 import React  from 'react'
 import styled from 'styled-components'
 

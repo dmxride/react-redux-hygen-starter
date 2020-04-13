@@ -1,15 +1,15 @@
 ---
-to: "<%= logic && 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/sagas.js' %>"
+to: "<%= logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/sagas.js' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container sagas
- * Please write a description
  *
  * @author <%= author%> <<%= email%>>
  *
  * @format
  * @flow
  */
+
 import { takeLatest } from 'redux-saga/effects'
 
 //import { actions } from 'src/store/rootSlices'

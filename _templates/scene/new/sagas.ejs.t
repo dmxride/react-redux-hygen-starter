@@ -1,9 +1,8 @@
 ---
-to: "<%= logic && 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/sagas.js' %>"
+to: "<%= logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/sagas.js' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> scene sagas
- * Please write a description
  *
  * @author <%= author%> <<%= email%>>
  *

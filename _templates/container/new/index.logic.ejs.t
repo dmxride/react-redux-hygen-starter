@@ -1,15 +1,15 @@
 ---
-to: "<%= logic && 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.js' %>"
+to: "<%= logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.js' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container
- * Please write a description
  *
  * @author <%= author%> <<%= email%>>
  *
  * @format
  * @flow
  */
+
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
@@ -23,17 +23,18 @@ const <%=h.inflection.camelize(name.toLowerCase())%> = ({ t, i18n }) => {
 
   //const { } = useSelector(state => state.<%=h.inflection.camelize(name.toLowerCase())%>)
 
-  const { onMount, onUnmount} = actions.<%=h.inflection.camelize(name.toLowerCase())%>
   //const { api_t } = actions.App
 
   const dispatch = useDispatch()
 
   useEffect(() => {
+    const { onMount, onUnmount} = actions.<%=h.inflection.camelize(name.toLowerCase())%>
+
     dispatch(onMount())
     return () => {
       dispatch(onUnmount())
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <Wrapper>

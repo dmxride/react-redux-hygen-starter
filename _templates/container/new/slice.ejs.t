@@ -1,14 +1,14 @@
 ---
-to: "<%= logic && 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.js' %>"
+to: "<%= logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.js' : null %>"
 ---
 /**
- * <%= h.inflection.camelize(name.toLowerCase())%> container reducers
- * Please write a description
+ * <%= h.inflection.camelize(name.toLowerCase())%> container slice
  *
  * @author <%= author%> <<%= email%>>
  *
  * @format
  */
+
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {}
