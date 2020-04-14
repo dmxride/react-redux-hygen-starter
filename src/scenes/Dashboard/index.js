@@ -11,7 +11,7 @@ const Dashboard = ({ t, i18n }) => {
   const { api_t } = useSelector(state => state.App)
   const { value, welcome } = useSelector(state => state.Dashboard)
 
-  const { setValue, updateValue } = actions.Dashboard
+  const { onMount, onUnmount, setValue, updateValue } = actions.Dashboard
   const { navigateTo } = actions.App
 
   const dispatch = useDispatch()
@@ -19,12 +19,11 @@ const Dashboard = ({ t, i18n }) => {
   const { API_TRANSLATION_TEST } = api_t
 
   useEffect(() => {
-    const { onMount, onUnmount } = actions.Dashboard
     dispatch(onMount())
     return () => {
       dispatch(onUnmount())
     }
-  }, [dispatch]);
+  }, [dispatch, onMount, onUnmount]);
 
   return (
     <Wrapper>

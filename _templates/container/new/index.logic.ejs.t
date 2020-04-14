@@ -23,18 +23,18 @@ const <%=h.inflection.camelize(name.toLowerCase())%> = ({ t, i18n }) => {
 
   //const { } = useSelector(state => state.<%=h.inflection.camelize(name.toLowerCase())%>)
 
+  const { onMount, onUnmount} = actions.<%=h.inflection.camelize(name.toLowerCase())%>
   //const { api_t } = actions.App
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const { onMount, onUnmount} = actions.<%=h.inflection.camelize(name.toLowerCase())%>
 
     dispatch(onMount())
     return () => {
       dispatch(onUnmount())
     }
-  }, [dispatch]);
+  }, [dispatch, onMount, onUnmount]);
 
   return (
     <Wrapper>

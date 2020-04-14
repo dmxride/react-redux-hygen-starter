@@ -18,23 +18,20 @@ import { withTranslation } from 'react-i18next';
 import GlobalStyles from 'src/ui/globalStyles'
 import theme from 'src/ui/theme'
 
-import Routes from '../routes'
+import Routes from 'src/routes'
 
 import AppTools from './AppTools'
-
-import { actions } from 'src/store/rootSlices'
 
 function App(props) {
   const { t, i18n } = props
 
-  const { user } = useSelector(state => state.App)
+  const { onMount, user } = useSelector(state => state.App)
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const { onMount } = actions.App
     dispatch(onMount())
-  }, [dispatch])
+  }, [dispatch, onMount])
 
   return (
     <ThemeProvider theme={theme}>
