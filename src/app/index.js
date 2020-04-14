@@ -22,10 +22,14 @@ import Routes from 'src/routes'
 
 import AppTools from './AppTools'
 
+import { actions } from 'src/store/rootSlices'
+
 function App(props) {
   const { t, i18n } = props
 
-  const { onMount, user } = useSelector(state => state.App)
+  const { user } = useSelector(state => state.App)
+
+  const { onMount } = actions.App
 
   const dispatch = useDispatch()
 
