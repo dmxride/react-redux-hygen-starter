@@ -8,7 +8,6 @@ to: "<%= logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/l
  *
  * @format
  */
-
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {}
@@ -16,5 +15,8 @@ const initialState = {}
 export default createSlice({
   name: '<%= h.inflection.camelize(name.toLowerCase())%>',
   initialState,
-  reducers: {}
+  reducers: {
+    onMount: (state, { payload }) => {},
+    onUnmount: (state, { payload }) => {}
+  }
 })

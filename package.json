@@ -161,6 +161,12 @@
       "react-app"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
   "devDependencies": {
     "husky": "^4.2.3",
     "hygen": "^5.0.3",

@@ -15,5 +15,8 @@ const initialState = {}
 export default createSlice({
   name: '<%= h.inflection.camelize(name.toLowerCase())%>',
   initialState,
-  reducers: {}
+  reducers: {
+    onMount: (state, { payload }) => {},
+    onUnmount: (state, { payload }) => {}
+  }
 })
