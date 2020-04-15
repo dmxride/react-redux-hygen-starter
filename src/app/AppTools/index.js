@@ -13,7 +13,7 @@ import styled from 'styled-components'
 
 import { actions } from 'src/store/rootSlices'
 
-const AppTools = props => {
+const AppTools = (props: { roles: Object, translationMode: bool }) => {
 
   const { user, apiTranslationsEdit } = useSelector(state => state.App)
   const { roles } = useSelector(state => state.AppTools)

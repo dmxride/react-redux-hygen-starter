@@ -1,9 +1,8 @@
 ---
-to: "<%= logic && 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.js' %>"
+to: "<%= logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.js' : null %>"
 ---
 /**
- * <%= h.inflection.camelize(name.toLowerCase())%> container reducers
- * Please write a description
+ * <%= h.inflection.camelize(name.toLowerCase())%> container slice
  *
  * @author <%= author%> <<%= email%>>
  *
@@ -16,5 +15,8 @@ const initialState = {}
 export default createSlice({
   name: '<%= h.inflection.camelize(name.toLowerCase())%>',
   initialState,
-  reducers: {}
+  reducers: {
+    onMount: (state, { payload }) => {},
+    onUnmount: (state, { payload }) => {}
+  }
 })

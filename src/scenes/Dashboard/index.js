@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { actions } from 'src/store/rootSlices'
 
-import logo from 'src/assets/images/logo.png'
+import logo from 'assets/images/logo.png'
 
 const Dashboard = ({ t, i18n }) => {
 
@@ -23,7 +23,7 @@ const Dashboard = ({ t, i18n }) => {
     return () => {
       dispatch(onUnmount())
     }
-  }, []);
+  }, [dispatch, onMount, onUnmount]);
 
   return (
     <Wrapper>
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
 `
 
 const Text = styled.h1`
-  color: #fff;  
+  color: #fff;
   padding:6px 12px 6px 12px;
   background-color: ${({ theme }) => theme.blue};
 `

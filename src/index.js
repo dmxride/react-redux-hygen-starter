@@ -8,6 +8,7 @@ import * as serviceWorker from 'src/serviceWorker'
 
 import { history, initI18N } from 'src/utils'
 import store from 'src/store'
+import 'normalize.css'
 
 initI18N()
 

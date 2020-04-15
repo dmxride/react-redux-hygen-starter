@@ -297,6 +297,11 @@ module.exports = function (webpackEnv) {
         }),
         ...(modules.webpackAliases || {}),
         src: path.resolve(__dirname, '../src'),
+        scenes: path.resolve(__dirname, '../src/scenes/'),
+        containers: path.resolve(__dirname, '../src/containers/'),
+        components: path.resolve(__dirname, '../src/components/'),
+        app: path.resolve(__dirname, '../src/app/'),
+        assets: path.resolve(__dirname, '../src/assets/'),
         react: path.resolve('./node_modules/react')
       },
       plugins: [

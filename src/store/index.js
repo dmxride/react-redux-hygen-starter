@@ -1,6 +1,5 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
-import { createLogger } from 'redux-logger'
 
 import { rootReducer } from './rootSlices'
 import rootSaga from './rootSaga'
@@ -13,7 +12,7 @@ export default () => {
     serializableCheck: false
   })
 
-  const middleware = [...customizedMiddleware, sagaMiddleware, createLogger()]
+  const middleware = [...customizedMiddleware, sagaMiddleware]
 
   const store = configureStore({
     reducer: rootReducer,
@@ -24,4 +23,4 @@ export default () => {
   sagaMiddleware.run(rootSaga)
 
   return store
-} 
+}
