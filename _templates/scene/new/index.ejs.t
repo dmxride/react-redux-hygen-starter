@@ -1,5 +1,5 @@
 ---
-to: "<%= !logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.js' : null %>"
+to: "<%= !logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> scene
@@ -12,7 +12,7 @@ to: "<%= !logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/inde
 import React from 'react'
 import styled from 'styled-components'
 
-//import config from 'src/config'
+//import config from 'config'
 
 const <%=h.inflection.camelize(name.toLowerCase())%> = ({ t, i18n }) => {
 

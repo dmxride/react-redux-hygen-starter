@@ -7,22 +7,22 @@
  * @format
  */
 
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: 'Press one of the buttons bellow',
-  welcome: 'Welcome'
-}
+  welcome: 'Welcome',
+};
 
 export default createSlice({
   name: 'Dashboard',
   initialState,
   reducers: {
-    onMount: (state, { payload }) => { },
-    onUnmount: (state, { payload }) => { },
+    onMount: () => {},
+    onUnmount: () => {},
     setValue: (state, { payload }) => {
-      state.value = payload
+      state.value = payload;
     },
-    updateValue: (state, { payload }) => { }
-  }
-})
+    updateValue: () => {},
+  },
+});

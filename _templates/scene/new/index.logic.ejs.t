@@ -1,5 +1,5 @@
 ---
-to: "<%= logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.js' : null %>"
+to: "<%= logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.ts' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> scene
@@ -14,9 +14,9 @@ import styled from 'styled-components'
 
 import { useDispatch, /*useSelector*/ } from 'react-redux'
 
-import { actions } from 'src/store/rootSlices'
+import { actions } from 'store/rootSlices'
 
-//import config from 'src/config'
+//import config from 'config'
 
 const <%=h.inflection.camelize(name.toLowerCase())%> = ({ t, i18n }) => {
 

@@ -1,5 +1,5 @@
 ---
-to: "<%= logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/sagas.js' : null %>"
+to: "<%= logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/sagas.ts' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> scene sagas
@@ -11,7 +11,7 @@ to: "<%= logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic
  */
 import { takeLatest } from 'redux-saga/effects'
 
-//import { actions } from 'src/store/rootSlices'
+//import { actions } from 'store/rootSlices'
 
 function* onMountSaga({ payload }) {}
 

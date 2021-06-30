@@ -1,5 +1,5 @@
 ---
-to: "<%= !logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.js' : null %>"
+to: "<%= !logic ? 'containers/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container
@@ -13,7 +13,7 @@ to: "<%= !logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/
 import React  from 'react'
 import styled from 'styled-components'
 
-//import config from 'src/config'
+//import config from 'config'
 
 const <%=h.inflection.camelize(name.toLowerCase())%> = ({ t, i18n }) => {
 

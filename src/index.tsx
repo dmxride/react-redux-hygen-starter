@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import App from 'src/app';
-import * as serviceWorker from 'src/serviceWorker'
+import App from 'app';
+import * as serviceWorker from 'serviceWorker';
 
-import { history, initI18N } from 'src/utils'
-import store from 'src/store'
-import 'normalize.css'
+import { history, initI18N } from 'utils';
+import store from 'store';
+import 'normalize.css';
 
-initI18N()
+initI18N();
 
 ReactDOM.render(
   <Router history={history}>

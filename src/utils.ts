@@ -12,13 +12,13 @@ import { initReactI18next } from 'react-i18next';
 //import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import translations from 'src/translations';
+import translations from 'translations';
 
-import { createBrowserHistory } from 'history'
+import { createBrowserHistory } from 'history';
 
 export const history = createBrowserHistory({
   /* pass a configuration object here if needed */
-})
+});
 
 export const initI18N = () => {
   i18n
@@ -36,6 +36,5 @@ export const initI18N = () => {
       */
     });
 
-
   return i18n;
-}
+};

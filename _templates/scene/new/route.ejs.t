@@ -1,7 +1,7 @@
 ---
 inject: true
 skip_if: <%= h.inflection.camelize(name.toLowerCase())%>
-to: src/routes.js
+to: src/routes.ts
 after: const Routes = \[
 ---
   {

@@ -1,5 +1,5 @@
 ---
-to: src/containers/<%= h.inflection.camelize(name.toLowerCase())%>/utils.js
+to: src/containers/<%= h.inflection.camelize(name.toLowerCase())%>/utils.ts
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container utils

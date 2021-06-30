@@ -1,39 +1,42 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useDispatch } from 'react-redux'
+import React from 'react';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
 
-import { actions } from 'src/store/rootSlices'
+import { actions } from 'store/rootSlices';
 
-const Settings = props => {
-
-  const { navigateBack } = actions.App
-  const dispatch = useDispatch()
+const Settings = (props) => {
+  const { navigateBack } = actions.App;
+  const dispatch = useDispatch();
 
   return (
     <Wrapper>
       <Text>SETTINGS</Text>
-      <Button onClick={() => { dispatch(navigateBack()) }} >
+      <Button
+        onClick={() => {
+          dispatch(navigateBack());
+        }}
+      >
         NAVIGATE BACK
       </Button>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Settings
+export default Settings;
 
 const Wrapper = styled.div`
-  display:flex;
-  flex-direction:column;
-  flex:1;
-  justify-content:center;
-  align-items:center;
-`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Text = styled.h1`
-  color: #fff;  
-  padding:6px 12px 6px 12px;
+  color: #fff;
+  padding: 6px 12px 6px 12px;
   background-color: ${({ theme }) => theme.blue};
-`
+`;
 
 const Button = styled.button`
   display: inline-block;
@@ -50,7 +53,7 @@ const Button = styled.button`
   text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
 
-  &:hover{
+  &:hover {
     background: #0053ba;
   }
-`
+`;

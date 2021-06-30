@@ -7,16 +7,16 @@
  * @format
  */
 
-import { createSlice } from '@reduxjs/toolkit'
-import config from 'src/config'
-const { ROLES } = config
+import { createSlice } from '@reduxjs/toolkit';
+import config from 'config';
+const { ROLES } = config;
 
 const initialState = {
-  roles: ROLES
-}
+  roles: ROLES,
+};
 
 export default createSlice({
   name: 'AppTools',
   initialState,
-  reducers: {}
-})
+  reducers: {},
+});

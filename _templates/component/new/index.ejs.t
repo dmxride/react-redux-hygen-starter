@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= h.inflection.camelize(name.toLowerCase())%>/index.js
+to: src/components/<%= h.inflection.camelize(name.toLowerCase())%>/index.tsx
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> component

@@ -1,6 +1,6 @@
 ---
 inject: true
-to: "<%= logic ? 'src/store/rootSaga.js' : null %>"
+to: "<%= logic ? 'store/rootSaga.ts' : null %>"
 after: yield all\(\[
 ---
     <%=name.toLowerCase()%>Saga(),
