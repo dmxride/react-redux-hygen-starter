@@ -7,7 +7,6 @@ to: "<%= logic ? 'containers/'+h.inflection.camelize(name.toLowerCase())+'/logic
  * @author <%= author%> <<%= email%>>
  *
  * @format
- * @flow
  */
 
 import { takeLatest } from 'redux-saga/effects'

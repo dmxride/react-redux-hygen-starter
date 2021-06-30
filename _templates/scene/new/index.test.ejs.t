@@ -7,5 +7,4 @@ to: src/scenes/<%= h.inflection.camelize(name.toLowerCase())%>/index.test.tsx
  * @author <%= author%> <<%= email%>>
  *
  * @format
- * @flow
  */
