@@ -1,5 +1,5 @@
 ---
-to: src/containers/<%= h.inflection.camelize(name.toLowerCase())%>/utils.ts
+to: "<%= shared ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/utils.ts' :  'src/scenes/' + folder + '/containers/'+h.inflection.camelize(name.toLowerCase())+'/utils.ts' %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container utils

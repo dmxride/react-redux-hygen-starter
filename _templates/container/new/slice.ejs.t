@@ -1,5 +1,5 @@
 ---
-to: "<%= logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.ts' : null %>"
+to: "<%= logic ? shared ? 'src/shared/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.ts' : 'src/scenes/' + folder + '/containers/'+h.inflection.camelize(name.toLowerCase())+'/logic/slice.ts' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container slice
@@ -20,3 +20,4 @@ export default createSlice({
     onUnmount: (state, { payload }) => {}
   }
 })
+

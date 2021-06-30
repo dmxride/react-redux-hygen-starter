@@ -1,5 +1,5 @@
 ---
-to: "<%= !logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
+to: "<%= shared ? 'src/shared/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' :  'src/scenes/' + folder + '/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container

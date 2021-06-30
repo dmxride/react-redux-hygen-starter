@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= h.inflection.camelize(name.toLowerCase())%>/index.tsx
+to: "<%= shared ? 'src/shared/components/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' :  'src/scenes/'+ folder + '/components/' + h.inflection.camelize(name.toLowerCase())+'/index.tsx' %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> component
