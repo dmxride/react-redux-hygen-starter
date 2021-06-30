@@ -1,5 +1,5 @@
 import React from 'react';
-import Translation from 'containers/Translation';
+import Translation from 'shared/containers/Translation';
 
 export const DEFAULT_USER = { name: 'It is me', role: 'guest' };
 
