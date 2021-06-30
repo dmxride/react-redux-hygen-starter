@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.8.4",
+    "@reduxjs/toolkit": "^1.6.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -168,11 +169,11 @@
     }
   },
   "devDependencies": {
+    "eslint-config-prettier": "^6.10.1",
     "husky": "^4.2.3",
     "hygen": "^5.0.3",
+    "prettier": "^2.0.4",
     "semantic-release": "^17.0.4",
-    "snazzy": "^8.0.0",
-    "eslint-config-prettier": "^6.10.1",
-    "prettier": "^2.0.4"
+    "snazzy": "^8.0.0"
   }
 }
