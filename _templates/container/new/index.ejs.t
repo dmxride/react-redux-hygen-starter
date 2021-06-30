@@ -1,5 +1,5 @@
 ---
-to: "<%= !logic ? 'containers/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
+to: "<%= !logic ? 'src/containers/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> container

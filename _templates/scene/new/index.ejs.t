@@ -1,5 +1,5 @@
 ---
-to: "<%= !logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
+to: "<%= !logic ? 'src/scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.tsx' : null %>"
 ---
 /**
  * <%= h.inflection.camelize(name.toLowerCase())%> scene

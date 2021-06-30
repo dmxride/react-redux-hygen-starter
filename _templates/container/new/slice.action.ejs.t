@@ -1,6 +1,6 @@
 ---
 inject: true
-to: "<%= logic ? 'store/rootSlices.ts' : null %>"
+to: "<%= logic ? 'src/store/rootSlices.ts' : null %>"
 after: "export const actions = {"
 ---
   <%=h.inflection.camelize(name.toLowerCase())%>: <%= name.toLowerCase()%>Slice.actions,
