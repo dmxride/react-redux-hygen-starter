@@ -12,6 +12,8 @@ module.exports = {
         },
       ])
       .then(({ shared }) => {
+        isShared = shared;
+
         let prompt = [
           {
             type: 'input',
