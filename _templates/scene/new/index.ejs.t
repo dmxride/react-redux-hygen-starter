@@ -6,7 +6,7 @@ to: "<%= !logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/index.ts
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */
 import React from 'react'
 import styled from 'styled-components'

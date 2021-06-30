@@ -6,7 +6,7 @@ to: "<%= logic ? 'containers/'+h.inflection.camelize(name.toLowerCase())+'/index
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */
 
 import React, { useEffect } from 'react'

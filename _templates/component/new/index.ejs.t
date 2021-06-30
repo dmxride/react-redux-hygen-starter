@@ -6,7 +6,7 @@ to: src/components/<%= h.inflection.camelize(name.toLowerCase())%>/index.tsx
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */
 
 import React from 'react'

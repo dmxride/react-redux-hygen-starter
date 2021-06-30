@@ -4,8 +4,7 @@
  *
  * @author Carlos Silva <csilva@ubiwhere.com>
  *
- * @format
- * @flow
+ *
  */
 
 import React, { useEffect } from 'react';

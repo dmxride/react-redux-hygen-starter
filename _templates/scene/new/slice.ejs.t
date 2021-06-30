@@ -6,7 +6,7 @@ to: "<%= logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/sli
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */
 import { createSlice } from '@reduxjs/toolkit'
 

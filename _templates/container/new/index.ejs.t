@@ -6,7 +6,7 @@ to: "<%= !logic ? 'containers/'+h.inflection.camelize(name.toLowerCase())+'/inde
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */
 
 import React  from 'react'

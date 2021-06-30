@@ -4,7 +4,7 @@
  *
  * @author Carlos Silva <csilva@ubiwhere.com>
  *
- * @format
+ *
  */
 
 import i18n from 'i18next';

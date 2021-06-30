@@ -4,7 +4,6 @@
  * @author Hugo Fonseca <hfonseca@ubiwhere.com>
  * @author Carlos Silva <csilva@ubiwhere.com>
  *
- * @flow
  */
 
 import React, { useState } from 'react';

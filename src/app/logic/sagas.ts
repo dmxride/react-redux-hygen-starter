@@ -4,7 +4,7 @@
  *
  * @author Carlos Silva <csilva@ubiwhere.com>
  *
- * @format
+ *
  */
 
 import { call, takeLatest, putResolve, select } from 'redux-saga/effects';

@@ -6,5 +6,5 @@ to: "<%= logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/log
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */

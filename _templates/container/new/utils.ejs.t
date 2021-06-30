@@ -6,5 +6,5 @@ to: src/containers/<%= h.inflection.camelize(name.toLowerCase())%>/utils.ts
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */

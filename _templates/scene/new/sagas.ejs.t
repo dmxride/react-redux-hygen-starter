@@ -6,7 +6,7 @@ to: "<%= logic ? 'scenes/'+h.inflection.camelize(name.toLowerCase())+'/logic/sag
  *
  * @author <%= author%> <<%= email%>>
  *
- * @format
+ *
  */
 import { takeLatest } from 'redux-saga/effects'
 
