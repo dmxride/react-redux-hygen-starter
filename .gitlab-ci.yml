@@ -1,0 +1,91 @@
+image: node:14.4-alpine3.10
+
+variables:
+  DOCKER_DRIVER: overlay
+#  STAGING_SITE_ID: ""
+#  PRODUCTION_SITE_ID: ""
+
+stages:
+  - linter
+  - test
+  - promote
+
+before_script:
+  - apk --no-cache add git
+  - export GIT_AUTHOR_NAME="Ubiwhere Release Tools"
+  - export GIT_AUTHOR_EMAIL="ci@ubiwhere.com"
+  - git config user.name "Ubiwhere Release Tools"
+  - git config user.email "ci@ubiwhere.com"
+  - export NODE_OPTIONS=--max_old_space_size=4096
+
+# Eslint check
+lint:
+  stage: linter
+  allow_failure: true
+  script:
+    - yarn lint
+  except:
+    refs:
+      - tags
+
+# Test
+test:
+  stage: test
+  allow_failure: false
+  script:
+    - yarn test
+  except:
+    refs:
+      - tags
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+
+# Promote to Staging
+release qa and promote to staging:
+  stage: promote
+  only:
+    - development
+  before_script:
+    - export URL_HOST=$(git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g")
+    - git remote set-url origin "https://gitlab-ci-token:${GITLAB_TOKEN}@${URL_HOST}"
+  script:
+    - git checkout staging
+    - git pull
+    - git pull origin development
+    - git push
+    #    - npm install netlify-cli@2.61.2 -g --unsafe-perm
+    #    - npm install firebase-tools -g --unsafe-perm
+    - yarn install
+    - yarn build:qa
+#    - mkdir ~/.netlify
+#    - mkdir .netlify
+#    - 'echo "{\"siteId\": \"$STAGING_SITE_ID\"}" > .netlify/state.json'
+#    - echo "$NETLIFY_CONFIG" >> ~/.netlify/config.json
+#    - netlify deploy --dir build --prod
+#    - firebase use --token "$FIREBASE_TOKEN" staging
+#    - firebase deploy --only hosting:staging --non-interactive --token "$FIREBASE_TOKEN" --debug
+
+# Promote to Master
+release prod and promote to master:
+  stage: promote
+  only:
+    - master
+  before_script:
+    - export URL_HOST=$(git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g")
+    - git remote set-url origin "https://gitlab-ci-token:${GITLAB_TOKEN}@${URL_HOST}"
+  script:
+    - git checkout master
+    - git pull
+    - git pull origin staging
+    - git push
+    #    - npm install netlify-cli@2.61.2 -g --unsafe-perm
+    #    - npm install firebase-tools -g --unsafe-perm
+    - yarn install
+    - yarn build
+#    - mkdir ~/.netlify
+#    - mkdir .netlify
+#    - 'echo "{\"siteId\": \"$PRODUCTION_SITE_ID\"}" > .netlify/state.json'
+#    - echo "$NETLIFY_CONFIG" >> ~/.netlify/config.json
+#    - netlify deploy --dir build --prod
+#    - firebase use --token "$FIREBASE_TOKEN" production
+#    - firebase deploy --only hosting:production --non-interactive --token "$FIREBASE_TOKEN" --debug
+
