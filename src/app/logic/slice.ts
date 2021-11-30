@@ -1,12 +1,3 @@
-/**
- * App reducers
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
-
 import { createSlice } from '@reduxjs/toolkit';
 import { DEFAULT_USER, GENERATE_TRANSLATIONS } from './../utils';
 
@@ -20,7 +11,7 @@ export default createSlice({
   name: 'App',
   initialState,
   reducers: {
-    onMount: () => {},
+    onMount: () => { },
     setUser: (state, { payload }) => {
       state.user = payload;
     },
@@ -30,10 +21,10 @@ export default createSlice({
     setApiTranslations: (state, { payload }) => {
       state.api_t = GENERATE_TRANSLATIONS(payload);
     },
-    navigateTo: (state, { payload }) => {},
-    navigateBack: () => {},
-    toggleApiTranslationsEdit: () => {},
-    updateApiTranslationKey: (state, { payload }) => {},
-    updateUserRole: (state, { payload }) => {},
+    navigateTo: (state, { payload }) => { },
+    navigateBack: () => { },
+    toggleApiTranslationsEdit: () => { },
+    updateApiTranslationKey: (state, { payload }) => { },
+    updateUserRole: (state, { payload }) => { },
   },
 });

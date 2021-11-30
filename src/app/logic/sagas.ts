@@ -1,11 +1,3 @@
-/**
- * App sagas
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
 
 import { call, takeLatest, putResolve, select } from 'redux-saga/effects';
 import { history } from 'utils';

@@ -27,7 +27,7 @@ const Dashboard = ({ t, i18n }) => {
   return (
     <Wrapper>
       <Text>{welcome}</Text>
-      <Logo alt="Ubiwhere_logo" src={logo} />
+      <Logo alt="logo" src={logo} />
 
       <TextSmall>{value}</TextSmall>
       <Buttons>

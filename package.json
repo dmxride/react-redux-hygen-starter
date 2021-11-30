@@ -2,7 +2,6 @@
   "name": "react-redux",
   "version": "0.1.0",
   "private": true,
-  "repository": "ssh://git@gitlab.ubiwhere.com:knowledge-base/frontend/Starters/react-redux.git",
   "dependencies": {
     "@svgr/webpack": "4.3.3",
     "axios": "^0.19.2",

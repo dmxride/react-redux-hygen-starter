@@ -1,12 +1,3 @@
-/**
- * App utils
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 //import Backend from 'i18next-xhr-backend';

@@ -1,11 +1,4 @@
-/**
- * App reducers
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
+
 
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -18,11 +11,11 @@ export default createSlice({
   name: 'Dashboard',
   initialState,
   reducers: {
-    onMount: () => {},
-    onUnmount: () => {},
+    onMount: () => { },
+    onUnmount: () => { },
     setValue: (state, { payload }) => {
       state.value = payload;
     },
-    updateValue: () => {},
+    updateValue: () => { },
   },
 });

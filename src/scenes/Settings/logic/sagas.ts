@@ -1,11 +1,3 @@
-/**
- * Settings screen sagas
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
 
 import { takeLatest, putResolve } from 'redux-saga/effects';
 

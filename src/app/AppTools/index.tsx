@@ -1,11 +1,3 @@
-/**
- * AppTools Container
- *
- * @author Hugo Fonseca <hfonseca@ubiwhere.com>
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- */
-
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';

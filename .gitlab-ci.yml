@@ -12,10 +12,6 @@ stages:
 
 before_script:
   - apk --no-cache add git
-  - export GIT_AUTHOR_NAME="Ubiwhere Release Tools"
-  - export GIT_AUTHOR_EMAIL="ci@ubiwhere.com"
-  - git config user.name "Ubiwhere Release Tools"
-  - git config user.email "ci@ubiwhere.com"
   - export NODE_OPTIONS=--max_old_space_size=4096
 
 # Eslint check
@@ -44,14 +40,7 @@ release qa and promote to staging:
   stage: promote
   only:
     - development
-  before_script:
-    - export URL_HOST=$(git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g")
-    - git remote set-url origin "https://gitlab-ci-token:${GITLAB_TOKEN}@${URL_HOST}"
   script:
-    - git checkout staging
-    - git pull
-    - git pull origin development
-    - git push
     #    - npm install netlify-cli@2.61.2 -g --unsafe-perm
     #    - npm install firebase-tools -g --unsafe-perm
     - yarn install
@@ -69,14 +58,7 @@ release prod and promote to master:
   stage: promote
   only:
     - staging
-  before_script:
-    - export URL_HOST=$(git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g")
-    - git remote set-url origin "https://gitlab-ci-token:${GITLAB_TOKEN}@${URL_HOST}"
   script:
-    - git checkout master
-    - git pull
-    - git pull origin staging
-    - git push
     #    - npm install netlify-cli@2.61.2 -g --unsafe-perm
     #    - npm install firebase-tools -g --unsafe-perm
     - yarn install

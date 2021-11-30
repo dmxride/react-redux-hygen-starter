@@ -1,9 +1,4 @@
-/**
- * Translation Container
- *
- * @author Hugo Fonseca <hfonseca@ubiwhere.com>
- * @author Carlos Silva <csilva@ubiwhere.com>
- */
+
 import React from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';

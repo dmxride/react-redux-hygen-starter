@@ -1,11 +1,4 @@
-/**
- * Dashboard screen sagas
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
+
 
 import { takeLatest, putResolve } from 'redux-saga/effects';
 
@@ -15,7 +8,7 @@ function* onMountSaga() {
   yield putResolve(actions.Dashboard.setValue('I was called by onMount'));
 }
 
-function* onUnmountSaga() {}
+function* onUnmountSaga() { }
 
 function* updateValueSaga() {
   yield putResolve(actions.Dashboard.setValue('I was called by a Saga'));

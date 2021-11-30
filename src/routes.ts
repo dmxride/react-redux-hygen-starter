@@ -1,20 +1,3 @@
-/**
- * -----------------------------------------------------------------------------
- * Copyright (C) Ubiwhere, LDA
- * 2012-2018
- *
- *
- * The reproduction, transmission or use of this document or its contents is not
- * permitted without express written authorization. All rights, including rights
- * created by patent grant or registration of a utility model or design, are
- * reserved. Modifications made to this document are restricted to authorized
- * personnel only. Technical specifications and features are binding only when
- * specifically and expressly agreed upon in a written contract.
- * -----------------------------------------------------------------------------
- *
- * Router
- * Add new routes here
- */
 // Import page components bellow here
 // Keep them organized as the routes object
 import Dashboard from 'scenes/Dashboard';

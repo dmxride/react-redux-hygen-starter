@@ -1,10 +1,4 @@
-/**
- * HelpMessage Component
- *
- * @author Hugo Fonseca <hfonseca@ubiwhere.com>
- * @author Nuno Silva   <nmsilva@ubiwhere.com>
- * @author Carlos Silva   <csilva@ubiwhere.com>
- */
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 

@@ -1,12 +1,3 @@
-/**
- * App
- * Please write a description
- *
- * @author Carlos Silva <csilva@ubiwhere.com>
- *
- *
- */
-
 import React, { useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
